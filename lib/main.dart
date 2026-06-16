@@ -29,18 +29,28 @@ class RootScreen extends StatefulWidget {
 
 class _RootScreenState extends State<RootScreen> {
   int selectedIndex = 0;
+  int addedCards = 0;
+  int removedCards = 0;
 
   final List<GameCard> deck = [];
 
   void addToDeck(GameCard card) {
     setState(() {
       deck.add(card);
+      addedCards++;
     });
   }
 
   void removeFromDeck(GameCard card) {
     setState(() {
       deck.remove(card);
+      removedCards++;
+    });
+  }
+
+  void clearDeck() {
+    setState(() {
+      deck.clear();
     });
   }
 
@@ -52,10 +62,13 @@ class _RootScreenState extends State<RootScreen> {
         children: [
           CardListScreen(
             onAddToDeck: addToDeck,
+            addedCards: addedCards,
+            removedCards: removedCards,
           ),
           DeckScreen(
             deck: deck,
             onRemove: removeFromDeck,
+            onClear: clearDeck,
           ),
         ],
       ),

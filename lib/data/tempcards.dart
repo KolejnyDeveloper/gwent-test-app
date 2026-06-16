@@ -13,7 +13,7 @@ const mockCards = [
   GameCard(
     id: "2",
     name: "Triss",
-    provisions: 9,
+    provisions: 3,
     faction: "Neutral",
     tags: ["Mage"],
     imageUrl: "https://static.wikia.nocookie.net/wiedzmin/images/b/b9/FA_CA_Triss_Merigold.jpg/revision/latest?cb=20191228124505",
