@@ -71,8 +71,9 @@ class CardTile extends StatelessWidget {
               Container(
                 width: 70,
                 color: Colors.grey.shade300,
-                child: Image.network(
-                  card.imageUrl,
+                child: Image.network(card.imageUrl != "" ?
+                  'https://gwent.one/image/gwent/assets/card/art/low/${card.imageUrl}.jpg': "https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif",
+                  //'https://www.gifcen.com/wp-content/uploads/2023/05/rickroll-gif-3.gif': "https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif",
                   width: 300,
                   height: 300,
                   fit: BoxFit.cover,

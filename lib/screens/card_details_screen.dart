@@ -23,7 +23,9 @@ class CardDetailsScreen extends StatelessWidget {
               height: 300,
               color: Colors.grey.shade300,
               child: Image.network(
-                card.imageUrl,
+                //Image.network(card.imageUrl != "" ?
+                //'https://gwent.one/image/gwent/assets/card/art/medium/${card.imageUrl}.jpg',
+                "https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif",
                 width: 300,
                 height: 300,
                 fit: BoxFit.cover,
